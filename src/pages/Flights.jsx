@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import flights from "../Data/flights";
+import flights from "../Data/flights.js";
 import FlightCard from "../components/FlightCard";
 import FlightMap from "../components/FlightMap";
 
