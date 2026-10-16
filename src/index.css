@@ -1,0 +1,1032 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.navbar {
+  height: 120px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 10;
+  
+
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+.login-btn {
+  background: #2563eb;
+  color: white !important;
+  padding: 11px 22px;
+  border-radius: 8px;
+}
+
+.btnm {
+  background: #2563eb;
+  color: white !important;
+  padding: 11px 22px;
+  border-radius: 8px;
+}
+
+.hero {
+  min-height: 570px;
+  padding: 80px 8%;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff, #ffffff);
+  position: relative;
+}
+
+.hero-content {
+  max-width: 650px;
+  margin: 20px auto 60px;
+  text-align: center;
+}
+
+.hero-content span,
+.page-heading span {
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.hero-content h1 {
+  font-size: 58px;
+  line-height: 1.1;
+  margin: 18px 0;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #64748b;
+}
+
+.search-box {
+  max-width: 1100px;
+  margin: auto;
+  padding: 25px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 15px;
+  align-items: end;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label,
+.form-container label,
+.auth-box label {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.input-group input,
+.form-container input,
+.auth-box input {
+  height: 45px;
+  padding: 0 12px;
+  border: 1px solid #d7dce5;
+  border-radius: 7px;
+  outline: none;
+}
+
+.input-group input:focus,
+.form-container input:focus,
+.auth-box input:focus {
+  border-color: #2563eb;
+}
+
+.search-box button,
+.flight-price button,
+.form-container button,
+.auth-box button {
+  height: 45px;
+  padding: 0 22px;
+  background: #2563eb;
+  color: white;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.search-box button:hover,
+.flight-price button:hover,
+.form-container button:hover,
+.auth-box button:hover {
+  background: #1d4ed8;
+}
+
+.destinations {
+  padding: 70px 8%;
+}
+
+.destinations h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.destination-card {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.destination-card div {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.destination-card h3 {
+  margin-bottom: 8px;
+}
+
+.destination-card p {
+  color: #64748b;
+}
+
+.flights-page {
+  padding: 70px 8%;
+  min-height: 700px;
+}
+
+.page-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.page-heading h1 {
+  font-size: 42px;
+  margin: 12px 0;
+}
+
+.page-heading p {
+  color: #64748b;
+}
+
+.flight-list {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.flight-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.airline h3 {
+  margin-bottom: 7px;
+}
+
+.airline span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.flight-route {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.flight-route strong {
+  font-size: 20px;
+}
+
+.flight-route p {
+  color: #64748b;
+  margin-top: 5px;
+}
+
+.route-line {
+  color: #2563eb;
+  font-size: 13px;
+}
+
+.flight-price {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+}
+
+.flight-price span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.flight-price strong {
+  font-size: 23px;
+}
+
+.form-page,
+.auth-page {
+  min-height: 750px;
+  padding: 70px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-container {
+  width: 650px;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h1,
+.auth-box h1 {
+  margin-bottom: 8px;
+}
+
+.form-container > p,
+.auth-box > p {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.form-container form,
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-container form > input {
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-row div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-box {
+  width: 420px;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.auth-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.auth-box form {
+  margin-bottom: 25px;
+}
+
+.auth-box form input {
+  margin-bottom: 10px;
+}
+
+.auth-box a {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.footer {
+  background: #111827;
+  color: white;
+  padding: 40px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  color: #9ca3af;
+  margin-top: 7px;
+}
+
+@media (max-width: 900px) {
+  .search-box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .flight-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .flight-price {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .search-box {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-box,
+  .form-container {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+.payment-page {
+  min-height: 80vh;
+  padding: 60px 8%;
+  background: #f5f7fb;
+}
+
+.payment-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+}
+
+.payment-left,
+.payment-summary {
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.payment-left h1 {
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+
+.payment-left p {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.payment-methods button {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.payment-methods button:hover {
+  border-color: #2563eb;
+}
+
+.payment-methods button.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.payment-left form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-left label {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.payment-left input,
+.payment-left select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.payment-left input:focus,
+.payment-left select:focus {
+  border-color: #2563eb;
+}
+
+.payment-left .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.pay-btn {
+  margin-top: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pay-btn:hover {
+  background: #1d4ed8;
+}
+
+.payment-summary {
+  height: fit-content;
+}
+
+.payment-summary h2 {
+  margin-bottom: 25px;
+}
+
+.payment-summary > div {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0;
+  color: #555;
+}
+
+.payment-summary hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 25px 0;
+}
+
+.payment-summary .total {
+  font-size: 21px;
+  font-weight: 700;
+  color: #111;
+}
+
+@media (max-width: 768px) {
+  .payment-page {
+    padding: 35px 5%;
+  }
+
+  .payment-container {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-methods {
+    flex-direction: column;
+  }
+
+  .payment-left .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+.seat-page {
+  min-height: 80vh;
+  padding: 50px 7%;
+  background: #f5f7fb;
+}
+
+.seat-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.seat-heading span {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #2563eb;
+}
+
+.seat-heading h1 {
+  margin: 8px 0;
+  font-size: 34px;
+}
+
+.seat-heading p {
+  color: #777;
+}
+
+.class-selection {
+  max-width: 850px;
+  margin: 0 auto 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.class-selection button {
+  min-width: 180px;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.class-selection button:hover {
+  border-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.class-selection button.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.class-selection small {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.aircraft {
+  width: 430px;
+  margin: 0 auto;
+  padding: 25px 35px 35px;
+  background: white;
+  border-radius: 150px 150px 35px 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.cockpit {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px dashed #ddd;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.cockpit span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.seat-label {
+  display: grid;
+  grid-template-columns: 1fr 1fr 35px 1fr 1fr;
+  gap: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #888;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.seat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 35px 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.seat {
+  height: 42px;
+  border: none;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.seat.available {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.seat.available:hover {
+  transform: scale(1.05);
+  border-color: #2563eb;
+}
+
+.seat.selected {
+  background: #2563eb;
+  color: white;
+  border: 1px solid #2563eb;
+}
+
+.seat.occupied {
+  background: #333;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.aisle {
+  width: 35px;
+}
+
+.seat-info {
+  max-width: 850px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: #555;
+}
+
+.legend i {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.available-box {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+}
+
+.selected-box {
+  background: #2563eb;
+}
+
+.occupied-box {
+  background: #333;
+}
+
+.selected-info {
+  text-align: right;
+}
+
+.selected-info h2 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.selected-info p {
+  margin: 0 0 15px;
+  color: #777;
+  font-size: 14px;
+}
+
+.selected-info button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.selected-info button:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .seat-page {
+    padding: 35px 5%;
+  }
+
+  .class-selection {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .class-selection button {
+    width: 100%;
+  }
+
+  .aircraft {
+    width: 100%;
+    max-width: 430px;
+    padding: 25px 15px 30px;
+  }
+
+  .seat-info {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .selected-info {
+    text-align: center;
+  }
+
+  .legend {
+    justify-content: center;
+  }
+}
+.flight-map {
+  width: 100%;
+  max-width: 1100px;
+  height: 450px;
+  margin: 30px auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.flight-map .leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+.confirmation-page {
+  min-height: 80vh;
+  padding: 60px 7%;
+  background: #f5f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.confirmation-container {
+  width: 100%;
+  max-width: 850px;
+}
+
+.confirmation-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.success-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #22c55e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.25);
+}
+
+.confirmation-header h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #142957;
+}
+
+.confirmation-header p {
+  margin-top: 8px;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* TICKET */
+
+.booking-details {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  padding: 35px 40px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.booking-details::before,
+.booking-details::after {
+  content: "";
+  position: absolute;
+  top: 180px;
+  width: 28px;
+  height: 28px;
+  background: #f5f7fb;
+  border-radius: 50%;
+}
+
+
+
+.booking-details::before {
+  left: -14px;
+}
+
+.booking-details::after {
+  right: -14px;
+}
+
+.booking-details h2 {
+  margin: 0 0 25px;
+  font-size: 22px;
+  color: #111827;
+}
+
+/* FLIGHT INFORMATION */
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid #edf0f4;
+  font-size: 15px;
+}
+
+.detail-row span {
+  color: #6b7280;
+}
+
+.detail-row strong {
+  color: #111827;
+}
+
+.detail-row.total {
+  border-bottom: none;
+  margin-top: 10px;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.detail-row.total strong {
+  color: #2563eb;
+  font-size: 23px;
+}
+
+/* TICKET DIVIDER */
+
+.booking-details hr {
+  border: none;
+  border-top: 2px dashed #d9dee7;
+  margin: 25px 0;
+}
+
+/* BUTTON */
+
+.home-btn {
+  display: block;
+  margin: 25px auto 0;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.home-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .confirmation-page {
+    padding: 40px 5%;
+  }
+
+  .booking-details {
+    padding: 25px 20px;
+  }
+
+  .confirmation-header h1 {
+    font-size: 28px;
+  }
+
+  .detail-row {
+    font-size: 14px;
+  }
+
+  .detail-row.total {
+    font-size: 18px;
+  }
+}
